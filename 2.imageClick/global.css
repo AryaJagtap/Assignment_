@@ -1,0 +1,273 @@
+/* Base Styles */
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: var(--font-dm-sans);
+  background-color: var(--color-white);
+  transition: background-color 0.5s;
+}
+
+body:hover {
+  background-color: var(--color-gray-100);
+}
+
+:root {
+  /* Fonts */
+  --font-abeezee: ABeeZee;
+  --font-dm-sans: "DM Sans";
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+  --font-nunito-sans: "Nunito Sans";
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  --font-size-13xl: 32px;
+  --font-size-lgi: 19px;
+  --font-size-7xl: 26px;
+  --font-size-8xs-2: 4.2px;
+  --font-size-xs-8: 11.8px;
+  --font-size-lg: 18px;
+  --font-size-29xl: 48px;
+  --font-size-10xl: 29px;
+  --font-size-19xl: 38px;
+  --font-size-9xl: 28px;
+  --font-size-3xl: 22px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gray-100: rgba(0, 0, 0, 0.5);
+  --color-black: #000;
+  --color-darkslategray: #333;
+  --color-tomato: #ff5555;
+
+  /* Gaps */
+  --gap-xl: 20px;
+  --gap-base: 16px;
+  --gap-16xl: 35px;
+  --gap-xs: 12px;
+  --gap-21xl: 40px;
+  --gap-5xs: 8px;
+  --gap-9xs: 4px;
+  --gap-5xl: 24px;
+
+  /* Paddings */
+  --padding-21xl: 40px;
+  --padding-xl: 20px;
+  --padding-12xs: 1px;
+  --padding-18xl: 37px;
+  --padding-5xl: 24px;
+  --padding-3xs: 10px;
+  --padding-lg: 18px;
+  --padding-mid: 17px;
+  --padding-10xs: 3px;
+  --padding-6xs: 7px;
+  --padding-sm: 14px;
+  --padding-12xl: 31px;
+  --padding-11xl: 30px;
+  --padding-65xl: 84px;
+  --padding-44xl: 63px;
+  --padding-80xl: 99px;
+  --padding-27xl: 46px;
+  --padding-4xl: 23px;
+  --padding-13xl: 32px;
+  --padding-base: 16px;
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-5xs: 8px;
+  --br-base: 16px;
+
+  /* Effects */
+  --s: -13px 13px 104.09px rgba(161, 161, 161, 0.1);
+
+  /* New Animations */
+  --animation-fade-in: fade-in 1s ease-in-out;
+  --animation-bounce: bounce 1s infinite;
+  --animation-slide-in: slide-in 0.5s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+button, .card, .container {
+  box-shadow: var(--s);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .card:hover, .container:hover {
+  transform: scale(1.05);
+  box-shadow: -13px 13px 104.09px rgba(161, 161, 161, 0.3);
+}
+
+button {
+  background-color: var(--color-tomato);
+  color: var(--color-white);
+  padding: var(--padding-lg);
+  border: none;
+  border-radius: var(--br-base);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  animation: var(--animation-fade-in);
+}
+
+button:hover {
+  background-color: var(--color-darkslategray);
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: var(--padding-xl);
+  border-radius: var(--br-base);
+  animation: var(--animation-slide-in);
+}
+
+.container {
+  padding: var(--padding-xl);
+  animation: var(--animation-fade-in);
+}
+
+/* Additional hover effects */
+a {
+  color: var(--color-darkslategray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-tomato);
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Additional class for bounce effect */
+.bounce {
+  animation: var(--animation-bounce);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  button {
+    font-size: 15px;
+    padding: var(--padding-mid);
+  }
+  .card, .container {
+    padding: var(--padding-13xl);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+  button {
+    font-size: 14px;
+    padding: var(--padding-base);
+  }
+  .card, .container {
+    padding: var(--padding-base);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  button {
+    font-size: 13px;
+    padding: var(--padding-sm);
+  }
+  .card, .container {
+    padding: var(--padding-sm);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+  button {
+    font-size: 12px;
+    padding: var(--padding-10xs);
+  }
+  .card, .container {
+    padding: var(--padding-10xs);
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 12px;
+  }
+  button {
+    font-size: 11px;
+    padding: var(--padding-6xs);
+  }
+  .card, .container {
+    padding: var(--padding-6xs);
+  }
+  a {
+    font-size: var(--font-size-xs-8);
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 11px;
+  }
+  button {
+    font-size: 10px;
+    padding: var(--padding-3xs);
+  }
+  .card, .container {
+    padding: var(--padding-3xs);
+  }
+  a {
+    font-size: var(--font-size-8xs-2);
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

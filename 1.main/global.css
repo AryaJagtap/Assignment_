@@ -1,0 +1,185 @@
+/* Base Styles */
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: var(--font-plus-jakarta-sans);
+  background-color: var(--color-white);
+  transition: background-color 0.5s;
+}
+
+body:hover {
+  background-color: var(--color-black);
+}
+
+:root {
+  /* Fonts */
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+  --font-inter: Inter;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-darkgray: #333;
+  --color-tomato: #ff5555;
+
+  /* Paddings */
+  --padding-108xl: 127px;
+  --padding-xl: 20px;
+  --padding-44xl: 63px;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+  --br-76xl-9: 95.9px;
+  --br-28xl-9: 47.9px;
+
+  /* Effects */
+  --s: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --s-hover: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button, .card, .container {
+  box-shadow: var(--s);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .card:hover, .container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--s-hover);
+}
+
+button {
+  background-color: var(--color-tomato);
+  color: var(--color-white);
+  padding: var(--padding-xl);
+  border: none;
+  border-radius: var(--br-3xs);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e63e3e; /* Lighter shade of tomato */
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: var(--padding-xl);
+  border-radius: var(--br-3xs);
+}
+
+.container {
+  padding: var(--padding-xl);
+}
+
+a {
+  color: var(--color-darkgray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-tomato);
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  button {
+    font-size: 14px;
+    padding: 18px;
+  }
+  .card, .container {
+    padding: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+  button {
+    font-size: 14px;
+    padding: 16px;
+  }
+  .card, .container {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  button {
+    font-size: 13px;
+    padding: 14px;
+  }
+  .card, .container {
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  button {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .card, .container {
+    padding: 12px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 13px;
+  }
+  button {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .card, .container {
+    padding: 10px;
+  }
+  a {
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  button {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .card, .container {
+    padding: 8px;
+  }
+  a {
+    font-size: 12px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
